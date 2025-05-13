@@ -84,6 +84,9 @@ export namespace ScheduleCreateResponse {
 export interface ScheduleCreateParams {
   duration: string;
 
+  /**
+   * List of time windows to schedule (start and end must be in the future)
+   */
   windows: Array<ScheduleCreateParams.Window>;
 
   zones: Array<CloudZone>;
