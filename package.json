@@ -1,5 +1,5 @@
 {
-  "name": "carbonaware",
+  "name": "carbonaware-scheduler",
   "version": "0.0.1-alpha.0",
   "description": "The official TypeScript library for the Carbonaware Scheduler API",
   "author": "Carbonaware Scheduler <>",
@@ -50,8 +50,8 @@
     "synckit": "0.8.8"
   },
   "imports": {
-    "carbonaware": ".",
-    "carbonaware/*": "./src/*"
+    "carbonaware-scheduler": ".",
+    "carbonaware-scheduler/*": "./src/*"
   },
   "exports": {
     ".": {

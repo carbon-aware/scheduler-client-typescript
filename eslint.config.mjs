@@ -25,7 +25,7 @@ export default tseslint.config(
         {
           patterns: [
             {
-              regex: '^carbonaware(/.*)?',
+              regex: '^carbonaware-scheduler(/.*)?',
               message: 'Use a relative import, not a package import.',
             },
           ],

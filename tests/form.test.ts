@@ -1,5 +1,5 @@
-import { multipartFormRequestOptions, createForm } from 'carbonaware/internal/uploads';
-import { toFile } from 'carbonaware/core/uploads';
+import { multipartFormRequestOptions, createForm } from 'carbonaware-scheduler/internal/uploads';
+import { toFile } from 'carbonaware-scheduler/core/uploads';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {
