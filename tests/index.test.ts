@@ -1,10 +1,10 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIPromise } from 'carbonaware/core/api-promise';
+import { APIPromise } from 'carbonaware-scheduler/core/api-promise';
 
 import util from 'node:util';
-import CarbonawareScheduler from 'carbonaware';
-import { APIUserAbortError } from 'carbonaware';
+import CarbonawareScheduler from 'carbonaware-scheduler';
+import { APIUserAbortError } from 'carbonaware-scheduler';
 const defaultFetch = fetch;
 
 describe('instantiate client', () => {
