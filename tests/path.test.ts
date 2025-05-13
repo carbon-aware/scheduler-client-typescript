@@ -1,4 +1,4 @@
-import { createPathTagFunction, encodeURIPath } from 'carbonaware/internal/utils/path';
+import { createPathTagFunction, encodeURIPath } from 'carbonaware-scheduler/internal/utils/path';
 import { inspect } from 'node:util';
 
 describe('path template tag function', () => {

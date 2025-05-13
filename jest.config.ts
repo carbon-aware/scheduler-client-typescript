@@ -7,8 +7,8 @@ const config: JestConfigWithTsJest = {
     '^.+\\.(t|j)sx?$': ['@swc/jest', { sourceMaps: 'inline' }],
   },
   moduleNameMapper: {
-    '^carbonaware$': '<rootDir>/src/index.ts',
-    '^carbonaware/(.*)$': '<rootDir>/src/$1',
+    '^carbonaware-scheduler$': '<rootDir>/src/index.ts',
+    '^carbonaware-scheduler/(.*)$': '<rootDir>/src/$1',
   },
   modulePathIgnorePatterns: [
     '<rootDir>/ecosystem-tests/',

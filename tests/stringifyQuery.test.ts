@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { CarbonawareScheduler } from 'carbonaware';
+import { CarbonawareScheduler } from 'carbonaware-scheduler';
 
 const { stringifyQuery } = CarbonawareScheduler.prototype as any;
 
