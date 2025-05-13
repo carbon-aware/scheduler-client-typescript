@@ -10,7 +10,7 @@ describe('resource schedule', () => {
   // skipped: tests are disabled for the time being
   test.skip('create: only required params', async () => {
     const responsePromise = client.schedule.create({
-      duration: 'duration',
+      duration: 'PT1H',
       windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
       zones: [{ provider: 'aws', region: 'us-east-1' }],
     });
@@ -26,7 +26,7 @@ describe('resource schedule', () => {
   // skipped: tests are disabled for the time being
   test.skip('create: required and optional params', async () => {
     const response = await client.schedule.create({
-      duration: 'duration',
+      duration: 'PT1H',
       windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
       zones: [{ provider: 'aws', region: 'us-east-1' }],
       num_options: 0,
