@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.3 (2025-05-22)
+
+Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/carbon-aware/scheduler-client-typescript/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
+
+### Features
+
+* **api:** manual updates ([00a583a](https://github.com/carbon-aware/scheduler-client-typescript/commit/00a583a587022827225fbed03a1bcc7928eb30d5))
+
+
+### Chores
+
+* **docs:** grammar improvements ([652e4bb](https://github.com/carbon-aware/scheduler-client-typescript/commit/652e4bbd36eda5fa9c4f91dec77c9c13616a3888))
+
 ## 0.1.0-alpha.2 (2025-05-13)
 
 Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/carbon-aware/scheduler-client-typescript/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)

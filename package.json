@@ -1,6 +1,6 @@
 {
   "name": "carbonaware-scheduler",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.0-alpha.3",
   "description": "The official TypeScript library for the Carbonaware Scheduler API",
   "author": "Carbonaware Scheduler <ryan@carbonaware.dev>",
   "types": "dist/index.d.ts",
