@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.1.0-alpha.3 (2025-05-31)
+
+Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/carbon-aware/scheduler-client-typescript/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
+
+### Features
+
+* **api:** manual updates ([00a583a](https://github.com/carbon-aware/scheduler-client-typescript/commit/00a583a587022827225fbed03a1bcc7928eb30d5))
+
+
+### Bug Fixes
+
+* compat with more runtimes ([9869c64](https://github.com/carbon-aware/scheduler-client-typescript/commit/9869c64973951e72e3743870832fc951f5e8b985))
+
+
+### Chores
+
+* **deps:** bump eslint-plugin-prettier ([e15a5a3](https://github.com/carbon-aware/scheduler-client-typescript/commit/e15a5a3fae9c7804aac17409f95fc04e3361828f))
+* **docs:** grammar improvements ([652e4bb](https://github.com/carbon-aware/scheduler-client-typescript/commit/652e4bbd36eda5fa9c4f91dec77c9c13616a3888))
+* improve publish-npm script --latest tag logic ([e4066b4](https://github.com/carbon-aware/scheduler-client-typescript/commit/e4066b4eeb3ccb085d49bd911731cc9a82bfa854))
+* **internal:** update jest config ([985f1da](https://github.com/carbon-aware/scheduler-client-typescript/commit/985f1daa3f86ffdd33377bb5652b157084fdda3d))
+
 ## 0.1.0-alpha.2 (2025-05-13)
 
 Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/carbon-aware/scheduler-client-typescript/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
