@@ -12,7 +12,7 @@ describe('resource schedule', () => {
     const responsePromise = client.schedule.create({
       duration: 'PT1H',
       windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-      zones: [{ provider: 'aws', region: 'us-east-1' }],
+      zones: [{ provider: 'aws', region: 'af-south-1' }],
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -28,7 +28,7 @@ describe('resource schedule', () => {
     const response = await client.schedule.create({
       duration: 'PT1H',
       windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-      zones: [{ provider: 'aws', region: 'us-east-1' }],
+      zones: [{ provider: 'aws', region: 'af-south-1' }],
       num_options: 0,
     });
   });

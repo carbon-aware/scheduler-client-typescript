@@ -28,7 +28,7 @@ async function main() {
   const schedule = await client.schedule.create({
     duration: 'PT1H',
     windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-    zones: [{ provider: 'aws', region: 'us-east-1' }],
+    zones: [{ provider: 'aws', region: 'af-south-1' }],
   });
 
   console.log(schedule.ideal);
@@ -51,7 +51,7 @@ async function main() {
   const params: CarbonawareScheduler.ScheduleCreateParams = {
     duration: 'PT1H',
     windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-    zones: [{ provider: 'aws', region: 'us-east-1' }],
+    zones: [{ provider: 'aws', region: 'af-south-1' }],
   };
   const schedule: CarbonawareScheduler.ScheduleCreateResponse = await client.schedule.create(params);
 }
@@ -74,7 +74,7 @@ async function main() {
     .create({
       duration: 'PT1H',
       windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-      zones: [{ provider: 'aws', region: 'us-east-1' }],
+      zones: [{ provider: 'aws', region: 'af-south-1' }],
     })
     .catch(async (err) => {
       if (err instanceof CarbonawareScheduler.APIError) {
@@ -119,7 +119,7 @@ const client = new CarbonawareScheduler({
 });
 
 // Or, configure per-request:
-await client.schedule.create({ duration: 'PT1H', windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }], zones: [{ provider: 'aws', region: 'us-east-1' }] }, {
+await client.schedule.create({ duration: 'PT1H', windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }], zones: [{ provider: 'aws', region: 'af-south-1' }] }, {
   maxRetries: 5,
 });
 ```
@@ -136,7 +136,7 @@ const client = new CarbonawareScheduler({
 });
 
 // Override per-request:
-await client.schedule.create({ duration: 'PT1H', windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }], zones: [{ provider: 'aws', region: 'us-east-1' }] }, {
+await client.schedule.create({ duration: 'PT1H', windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }], zones: [{ provider: 'aws', region: 'af-south-1' }] }, {
   timeout: 5 * 1000,
 });
 ```
@@ -163,7 +163,7 @@ const response = await client.schedule
   .create({
     duration: 'PT1H',
     windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-    zones: [{ provider: 'aws', region: 'us-east-1' }],
+    zones: [{ provider: 'aws', region: 'af-south-1' }],
   })
   .asResponse();
 console.log(response.headers.get('X-My-Header'));
@@ -173,7 +173,7 @@ const { data: schedule, response: raw } = await client.schedule
   .create({
     duration: 'PT1H',
     windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-    zones: [{ provider: 'aws', region: 'us-east-1' }],
+    zones: [{ provider: 'aws', region: 'af-south-1' }],
   })
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
