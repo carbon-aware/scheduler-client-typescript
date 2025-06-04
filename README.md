@@ -4,7 +4,7 @@
 
 This library provides convenient access to the Carbonaware Scheduler REST API from server-side TypeScript or JavaScript.
 
-The full API of this library can be found in [api.md](api.md).
+The REST API documentation can be found on [docs.carbonaware.dev](https://docs.carbonaware.dev/scheduler/). The full API of this library can be found in [api.md](api.md).
 
 It is generated with [Stainless](https://www.stainless.com/).
 
@@ -24,17 +24,13 @@ import CarbonawareScheduler from 'carbonaware-scheduler';
 
 const client = new CarbonawareScheduler();
 
-async function main() {
-  const schedule = await client.schedule.create({
-    duration: 'PT1H',
-    windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-    zones: [{ provider: 'aws', region: 'us-east-1' }],
-  });
+const schedule = await client.schedule.create({
+  duration: 'PT1H',
+  windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
+  zones: [{ provider: 'aws', region: 'af-south-1' }],
+});
 
-  console.log(schedule.ideal);
-}
-
-main();
+console.log(schedule.ideal);
 ```
 
 ### Request & Response types
@@ -47,16 +43,12 @@ import CarbonawareScheduler from 'carbonaware-scheduler';
 
 const client = new CarbonawareScheduler();
 
-async function main() {
-  const params: CarbonawareScheduler.ScheduleCreateParams = {
-    duration: 'PT1H',
-    windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-    zones: [{ provider: 'aws', region: 'us-east-1' }],
-  };
-  const schedule: CarbonawareScheduler.ScheduleCreateResponse = await client.schedule.create(params);
-}
-
-main();
+const params: CarbonawareScheduler.ScheduleCreateParams = {
+  duration: 'PT1H',
+  windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
+  zones: [{ provider: 'aws', region: 'af-south-1' }],
+};
+const schedule: CarbonawareScheduler.ScheduleCreateResponse = await client.schedule.create(params);
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -69,25 +61,21 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-async function main() {
-  const schedule = await client.schedule
-    .create({
-      duration: 'PT1H',
-      windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-      zones: [{ provider: 'aws', region: 'us-east-1' }],
-    })
-    .catch(async (err) => {
-      if (err instanceof CarbonawareScheduler.APIError) {
-        console.log(err.status); // 400
-        console.log(err.name); // BadRequestError
-        console.log(err.headers); // {server: 'nginx', ...}
-      } else {
-        throw err;
-      }
-    });
-}
-
-main();
+const schedule = await client.schedule
+  .create({
+    duration: 'PT1H',
+    windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
+    zones: [{ provider: 'aws', region: 'af-south-1' }],
+  })
+  .catch(async (err) => {
+    if (err instanceof CarbonawareScheduler.APIError) {
+      console.log(err.status); // 400
+      console.log(err.name); // BadRequestError
+      console.log(err.headers); // {server: 'nginx', ...}
+    } else {
+      throw err;
+    }
+  });
 ```
 
 Error codes are as follows:
@@ -119,7 +107,7 @@ const client = new CarbonawareScheduler({
 });
 
 // Or, configure per-request:
-await client.schedule.create({ duration: 'PT1H', windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }], zones: [{ provider: 'aws', region: 'us-east-1' }] }, {
+await client.schedule.create({ duration: 'PT1H', windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }], zones: [{ provider: 'aws', region: 'af-south-1' }] }, {
   maxRetries: 5,
 });
 ```
@@ -136,7 +124,7 @@ const client = new CarbonawareScheduler({
 });
 
 // Override per-request:
-await client.schedule.create({ duration: 'PT1H', windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }], zones: [{ provider: 'aws', region: 'us-east-1' }] }, {
+await client.schedule.create({ duration: 'PT1H', windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }], zones: [{ provider: 'aws', region: 'af-south-1' }] }, {
   timeout: 5 * 1000,
 });
 ```
@@ -163,7 +151,7 @@ const response = await client.schedule
   .create({
     duration: 'PT1H',
     windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-    zones: [{ provider: 'aws', region: 'us-east-1' }],
+    zones: [{ provider: 'aws', region: 'af-south-1' }],
   })
   .asResponse();
 console.log(response.headers.get('X-My-Header'));
@@ -173,7 +161,7 @@ const { data: schedule, response: raw } = await client.schedule
   .create({
     duration: 'PT1H',
     windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-    zones: [{ provider: 'aws', region: 'us-east-1' }],
+    zones: [{ provider: 'aws', region: 'af-south-1' }],
   })
   .withResponse();
 console.log(raw.headers.get('X-My-Header'));
