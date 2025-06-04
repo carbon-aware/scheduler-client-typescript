@@ -24,17 +24,13 @@ import CarbonawareScheduler from 'carbonaware-scheduler';
 
 const client = new CarbonawareScheduler();
 
-async function main() {
-  const schedule = await client.schedule.create({
-    duration: 'PT1H',
-    windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-    zones: [{ provider: 'aws', region: 'af-south-1' }],
-  });
+const schedule = await client.schedule.create({
+  duration: 'PT1H',
+  windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
+  zones: [{ provider: 'aws', region: 'af-south-1' }],
+});
 
-  console.log(schedule.ideal);
-}
-
-main();
+console.log(schedule.ideal);
 ```
 
 ### Request & Response types
@@ -47,16 +43,12 @@ import CarbonawareScheduler from 'carbonaware-scheduler';
 
 const client = new CarbonawareScheduler();
 
-async function main() {
-  const params: CarbonawareScheduler.ScheduleCreateParams = {
-    duration: 'PT1H',
-    windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-    zones: [{ provider: 'aws', region: 'af-south-1' }],
-  };
-  const schedule: CarbonawareScheduler.ScheduleCreateResponse = await client.schedule.create(params);
-}
-
-main();
+const params: CarbonawareScheduler.ScheduleCreateParams = {
+  duration: 'PT1H',
+  windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
+  zones: [{ provider: 'aws', region: 'af-south-1' }],
+};
+const schedule: CarbonawareScheduler.ScheduleCreateResponse = await client.schedule.create(params);
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -69,25 +61,21 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-async function main() {
-  const schedule = await client.schedule
-    .create({
-      duration: 'PT1H',
-      windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
-      zones: [{ provider: 'aws', region: 'af-south-1' }],
-    })
-    .catch(async (err) => {
-      if (err instanceof CarbonawareScheduler.APIError) {
-        console.log(err.status); // 400
-        console.log(err.name); // BadRequestError
-        console.log(err.headers); // {server: 'nginx', ...}
-      } else {
-        throw err;
-      }
-    });
-}
-
-main();
+const schedule = await client.schedule
+  .create({
+    duration: 'PT1H',
+    windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
+    zones: [{ provider: 'aws', region: 'af-south-1' }],
+  })
+  .catch(async (err) => {
+    if (err instanceof CarbonawareScheduler.APIError) {
+      console.log(err.status); // 400
+      console.log(err.name); // BadRequestError
+      console.log(err.headers); // {server: 'nginx', ...}
+    } else {
+      throw err;
+    }
+  });
 ```
 
 Error codes are as follows:
