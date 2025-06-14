@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.4 (2025-06-14)
+
+Full Changelog: [v0.1.0-alpha.3...v0.1.0-alpha.4](https://github.com/carbon-aware/scheduler-client-typescript/compare/v0.1.0-alpha.3...v0.1.0-alpha.4)
+
+### Bug Fixes
+
+* publish script — handle NPM errors correctly ([6026269](https://github.com/carbon-aware/scheduler-client-typescript/commit/6026269984f3bd1c6beb8c7d037228d5416305b6))
+
+
+### Chores
+
+* avoid type error in certain environments ([c66f13b](https://github.com/carbon-aware/scheduler-client-typescript/commit/c66f13b36353b849c8429de57081e3bd5c1eb5ce))
+* **internal:** add pure annotations, make base APIResource abstract ([8c59e68](https://github.com/carbon-aware/scheduler-client-typescript/commit/8c59e68b519e8bfd3d7e7888c618810048a6f5bf))
+
 ## 0.1.0-alpha.3 (2025-06-04)
 
 Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/carbon-aware/scheduler-client-typescript/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
