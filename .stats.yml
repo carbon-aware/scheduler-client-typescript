@@ -1,4 +1,4 @@
 configured_endpoints: 4
-openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/carbonaware%2Fcarbonaware-2dbf4d087175bcac9c2176c339e7e949347bf2857a5e61b51acc7eca28bd533f.yml
-openapi_spec_hash: 6e499aa542851583bc50e7acbde2bff4
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/carbonaware%2Fcarbonaware-65605ceb52487fda17af6c50bce2a7a64a7c33b3ae398829260bf913e078ec74.yml
+openapi_spec_hash: 421ce663d62a9285f933f98d30878252
 config_hash: 8be3b26a504eead5a14b041980ba2b53

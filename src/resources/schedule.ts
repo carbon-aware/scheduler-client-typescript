@@ -104,8 +104,19 @@ export interface CloudZone {
     | 'westus'
     | 'westus2'
     | 'westus3'
+    | 'ca-beauharnois'
+    | 'ca-toronto'
+    | 'de-frankfurt'
+    | 'fr-gravelines'
+    | 'fr-paris'
+    | 'fr-roubaix'
     | 'fr-strasbourg'
-    | 'pl-warsaw';
+    | 'gb-london'
+    | 'in-mumbai'
+    | 'pl-warsaw'
+    | 'sg-singapore'
+    | 'us-hillsboro'
+    | 'us-vint_hill';
 }
 
 export interface ScheduleOption {
