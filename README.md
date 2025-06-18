@@ -1,6 +1,6 @@
 # Carbonaware Scheduler TypeScript API Library
 
-[![NPM version](https://img.shields.io/npm/v/carbonaware-scheduler.svg)](https://npmjs.org/package/carbonaware-scheduler) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/carbonaware-scheduler)
+[![NPM version](<https://img.shields.io/npm/v/carbonaware-scheduler.svg?label=npm%20(stable)>)](https://npmjs.org/package/carbonaware-scheduler) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/carbonaware-scheduler)
 
 This library provides convenient access to the Carbonaware Scheduler REST API from server-side TypeScript or JavaScript.
 
