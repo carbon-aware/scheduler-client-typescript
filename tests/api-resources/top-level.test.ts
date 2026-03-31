@@ -7,7 +7,7 @@ const client = new CarbonawareScheduler({
 });
 
 describe('top level methods', () => {
-  // skipped: tests are disabled for the time being
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.retrieve();
     const rawResponse = await responsePromise.asResponse();
