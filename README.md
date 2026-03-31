@@ -107,7 +107,11 @@ const client = new CarbonawareScheduler({
 });
 
 // Or, configure per-request:
-await client.schedule.create({ duration: 'PT1H', windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }], zones: [{ provider: 'aws', region: 'af-south-1' }] }, {
+await client.schedule.create({
+  duration: 'PT1H',
+  windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
+  zones: [{ provider: 'aws', region: 'af-south-1' }],
+}, {
   maxRetries: 5,
 });
 ```
@@ -124,7 +128,11 @@ const client = new CarbonawareScheduler({
 });
 
 // Override per-request:
-await client.schedule.create({ duration: 'PT1H', windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }], zones: [{ provider: 'aws', region: 'af-south-1' }] }, {
+await client.schedule.create({
+  duration: 'PT1H',
+  windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
+  zones: [{ provider: 'aws', region: 'af-south-1' }],
+}, {
   timeout: 5 * 1000,
 });
 ```
