@@ -7,6 +7,20 @@ import { RequestOptions } from '../internal/request-options';
 export class Schedule extends APIResource {
   /**
    * Schedule
+   *
+   * @example
+   * ```ts
+   * const schedule = await client.schedule.create({
+   *   duration: 'PT1H',
+   *   windows: [
+   *     {
+   *       end: '2019-12-27T18:11:19.117Z',
+   *       start: '2019-12-27T18:11:19.117Z',
+   *     },
+   *   ],
+   *   zones: [{ provider: 'aws', region: 'af-south-1' }],
+   * });
+   * ```
    */
   create(body: ScheduleCreateParams, options?: RequestOptions): APIPromise<ScheduleCreateResponse> {
     return this._client.post('/v0/schedule/', { body, ...options });
