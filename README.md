@@ -1,6 +1,6 @@
 # Carbonaware Scheduler TypeScript API Library
 
-[![NPM version](https://img.shields.io/npm/v/carbonaware-scheduler.svg)](https://npmjs.org/package/carbonaware-scheduler) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/carbonaware-scheduler)
+[![NPM version](<https://img.shields.io/npm/v/carbonaware-scheduler.svg?label=npm%20(stable)>)](https://npmjs.org/package/carbonaware-scheduler) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/carbonaware-scheduler)
 
 This library provides convenient access to the Carbonaware Scheduler REST API from server-side TypeScript or JavaScript.
 
@@ -107,7 +107,11 @@ const client = new CarbonawareScheduler({
 });
 
 // Or, configure per-request:
-await client.schedule.create({ duration: 'PT1H', windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }], zones: [{ provider: 'aws', region: 'af-south-1' }] }, {
+await client.schedule.create({
+  duration: 'PT1H',
+  windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
+  zones: [{ provider: 'aws', region: 'af-south-1' }],
+}, {
   maxRetries: 5,
 });
 ```
@@ -124,7 +128,11 @@ const client = new CarbonawareScheduler({
 });
 
 // Override per-request:
-await client.schedule.create({ duration: 'PT1H', windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }], zones: [{ provider: 'aws', region: 'af-south-1' }] }, {
+await client.schedule.create({
+  duration: 'PT1H',
+  windows: [{ end: '2019-12-27T18:11:19.117Z', start: '2019-12-27T18:11:19.117Z' }],
+  zones: [{ provider: 'aws', region: 'af-south-1' }],
+}, {
   timeout: 5 * 1000,
 });
 ```
@@ -245,9 +253,8 @@ parameter. This library doesn't validate at runtime that the request matches the
 send will be sent as-is.
 
 ```ts
-client.foo.create({
-  foo: 'my_param',
-  bar: 12,
+client.schedule.create({
+  // ...
   // @ts-expect-error baz is not yet public
   baz: 'undocumented option',
 });

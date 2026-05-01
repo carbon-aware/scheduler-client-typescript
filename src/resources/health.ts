@@ -13,7 +13,7 @@ export class Health extends APIResource {
   }
 }
 
-export type HealthCheckResponse = Record<string, string>;
+export type HealthCheckResponse = { [key: string]: string };
 
 export declare namespace Health {
   export { type HealthCheckResponse as HealthCheckResponse };

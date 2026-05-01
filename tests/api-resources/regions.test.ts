@@ -7,7 +7,7 @@ const client = new CarbonawareScheduler({
 });
 
 describe('resource regions', () => {
-  // skipped: tests are disabled for the time being
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.regions.list();
     const rawResponse = await responsePromise.asResponse();

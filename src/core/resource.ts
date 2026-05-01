@@ -2,7 +2,7 @@
 
 import type { CarbonawareScheduler } from '../client';
 
-export class APIResource {
+export abstract class APIResource {
   protected _client: CarbonawareScheduler;
 
   constructor(client: CarbonawareScheduler) {
